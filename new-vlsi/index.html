@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>vlsi-exp-1</title>
+	<script type="text/javascript" ></script>
+	<meta charset="utf-8">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  
+<script src="index.js">
+</script>
+  <script src="jquery.js">
+</script>
+
+
+</head>
+<body>
+      <div class="container">
+
+      <div>
+
+        <center><p>
+        <h2 style="background-color: lightgrey"> EXPERIMENT ON INVERTER</h2></p>
+
+        <button type="button" class="btn btn-success">
+        <img src="images/simulate1.png" alt="simulation" style="width:20px;height:20px;" onclick="location.href : 'graph()'"> Simulate </button>
+&nbsp; &nbsp; &nbsp; &nbsp;
+        <select style="height: 36px ; background-color: orange " radius="2">
+          <option value="volvo" onclick="cmos()">Complementary CMOS Logic</option>
+          <option value="saab" onclick="nmos()">Pseudo NMOS Logic</option>
+        </select>
+
+      </center>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-2" id="first" align = "left">
+          <table id="gates" Border cellspacing="10" onclick="">
+           <p background-color="white" ><b>TOOL BAR</b></p>
+            <p style="color:white"> Selected Icon
+                <center>
+                	<img id="ImageFrame" />
+                </center></p></tr>
+                
+            <tr>
+            <p> Available Icons</p>
+              <td> 
+              <a href="#" onclick="setImg(this)"><img id="comp1" src="images/comp1.gif" draggable="true" alt="Mountain View" style="width:60px;height:40px; color: lightgrey" data-toggle="tooltip" title="PMOS" onclick= "setImg()"></a></td>
+          
+              <td>
+              <a href="#" onclick="setImg(this)"><img src="images/comp7.gif" draggable="true" alt="Mountain View" style="width:60px;height:40px; color: lightgrey" data-toggle="tooltip" title="NMOS"></a></td>
+            </tr>
+            <tr>
+              <td>
+              <a href="#" onclick="setImg(this)"><img src="images/comp2.gif" draggable="true" alt="Mountain View" style="width:60px;height:40px; color: lightgrey" data-toggle="tooltip" title="GROUND"></a>
+              <td>
+              <a href="#" onclick="setImg(this)"><img src="images/comp8.gif" draggable="true" alt="Mountain View" style="width:60px;height:40px; color: lightgrey" data-toggle="tooltip" title=" CAPACITOR" ></a></td>
+            </tr>
+            <tr>
+              <td>
+              <a href="#" onclick="setImg(this)"><img src="images/comp3.gif" alt="Mountain View" style="width:60px;height:40px; color: lightgrey" data-toggle="tooltip" title="WIRE"></a>
+              <td>
+              <a href="#" onclick="setImg(this)"><img src="images/comp9.gif" alt="Mountain View" style="width:60px;height:40px; color: lightgrey" data-toggle="tooltip" title="Vdd" ></a></td>
+            </tr>
+            <tr>
+              <td>
+              <a href="#" onclick="setImg(this)"><img src="images/comp4.gif" alt="Mountain View" style="width:60px;height:40px; color: lightgrey" data-toggle="tooltip" title="INPUT"></a> 
+              <td>
+              <a href="#" onclick="setImg(this)"><img src="images/comp10.gif" alt="Mountain View" style="width:60px;height:40px; color: lightgrey" data-toggle="tooltip" title="OUTPUT"></a></td>
+            </tr>
+            <tr>
+              <td>
+              <a href="#" onclick= "myfunction()"><img src="images/comp5.gif" alt="Mountain View" style="width:60px;height:40px; color: lightgrey" data-toggle="tooltip" title="Battery CELLS"></a></td>
+              <td>
+              <a href="#" onclick= "myfunction()"><img src="images/comp11.gif" alt="Mountain View" style="width:60px;height:40px; color: lightgrey" data-toggle="tooltip" title="AMMETER" onclick="alert."></a></td>
+            </tr>
+            <tr>
+              <td>
+              <a href="#" onclick="myfunction()"><img src="images/comp6.gif" alt="Mountain View" style="width:60px;height:40px; color: lightgrey" data-toggle="tooltip" title="ALTERNATING SYMBOL" ></a>
+              <td>
+              <a href="#" onclick="myfunction()" ><img src="images/comp12.gif" alt="Mountain View" style="width:60px;height:40px; color: lightgrey" data-toggle="tooltip" title="INDUCTOR" ></a></td>
+            </tr>
+              
+          </table>
+
+    
+       </div>
+<br>
+       <div class="col-sm-8" id="droptarget" onclick="gates()">
+      
+        <svg width="650" height="420">
+          <rect width="650" height="415" id="rect" style="fill:rgb(0,0,0);stroke-width:5;stroke:rgb(1,1,1)" />
+
+            <g fill="none" stroke="white" stroke-width="3">
+            <path stroke-dasharray="1,20" d="M5 20 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 40 l845 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 60 l845 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 80 l845 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 100 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 120 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 140 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 160 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 180 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 200 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 220 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 240 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 260 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 280 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 300 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 320 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 340 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 360 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 380 l825 0" /></path>
+            <path stroke-dasharray="1,20" d="M5 400 l825 0" /></path>
+
+            
+            </g>
+      </rect>    
+        </svg>
+          </div> 
+      <div class="col-sm-2" >
+       
+      </div>
+       </div>
+       </div>
+
+       
+<div class= "row" align="center">
+<button type="button" class="btn btn-success" margin="">Evaluate</button>
+</div>
+
+
+</body>
+</html>
